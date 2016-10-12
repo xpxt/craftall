@@ -1,2 +1,2 @@
 # craftall
-The game is based on science. You have 120 items of periodic table and the universe that you can explore.
+The game is based on science. You have 120 elements of periodic table and the universe that you can explore.
