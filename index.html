@@ -3,6 +3,28 @@
 
 <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAACVJREFUeAFjwAsYGRnBFAzABTBUYOiE6gLRtBSAAtwCSICBCAAAL0AAVRpuRpcAAAAASUVORK5CYII=" rel="icon" />
 
+<script>
+var game =
+{
+	menu:
+	{
+		page: function (id)
+		{
+			let page = window.document.getElementById (id);
+			if (page.style.display != 'flex')
+			{
+				page.style.display = 'flex';
+			}
+			else
+			{
+				page.style.display = 'none';
+			}
+
+		}
+	}
+}
+</script>
+
 <style>
 a
 {
@@ -28,6 +50,14 @@ body
 	width: 100%;
 }
 
+div.page
+{
+	display: none;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+}
+
 img.nav
 {
 	vertical-align: bottom;
@@ -38,6 +68,18 @@ nav
 	color: gray;
 	margin: 1em;
 	text-align: center;
+}
+
+table.periodic
+{
+	color: ghostwhite;
+	text-align: center;
+	width: 85%;
+}
+
+td.group
+{
+	width: 5%;
 }
 </style>
 
@@ -52,10 +94,232 @@ nav
 	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA7SURBVHgBnY8xEgAgCMNo//9oBXPH0M1MNZ4VSk01RA2+CDEn5BPeJ0bACjoQBC7+RJTmtyFi9FgO4ACbqAEtZqt0MQAAAABJRU5ErkJggg==" /> INDUSTRY</a>
 	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAAxSURBVHgBY2BEAgwgAGEyAQGyABOYoEAA01BUmyHSUFUMYAEmCAdMQQUggJoCaP4HAIQ1AP+ovkqyAAAAAElFTkSuQmCC" /> POPULATION</a>
 	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA6SURBVHjajY1BCgAgDMPq/v9orREKimgOXchB1YwMytYkAeWcAWVe4fYokiJOijyhfsKYlTAhwLcbHZaLASNKVg1BAAAAAElFTkSuQmCC" /> SCIENCE</a>
+	<a href="#" onclick="game.menu.page ('table')"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAB1JREFUeAFjwASMKAAoAMFQghgBys3AFKCNwzAAADQQAGGLht1fAAAAAElFTkSuQmCC" /> TABLE</a>
 	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAABFSURBVHjadY8BDgAgCAKR/z+6xKxmyaaD01bBXHBZWJPhVEZ4DJhzRSEB5SQPsA5QdQADsAGot8BPZ2E/LfYvsBp+nysamJwBJIUuTcsAAAAASUVORK5CYII=" /> WAR</a>
 </nav>
 
-<script>
-</script>
-
+<div class="page" id="table">
+	<table class="periodic">
+		<tr class="period" name="0">
+			<td class="group">I</td>
+			<td class="group">II</td>
+			<td class="group">III</td>
+			<td class="group">IV</td>
+			<td class="group">V</td>
+			<td class="group">VI</td>
+			<td class="group">VII</td>
+			<td class="group">VIII</td>
+			<td class="group">IX</td>
+			<td class="group">X</td>
+			<td class="group">XI</td>
+			<td class="group">XII</td>
+			<td class="group">XIII</td>
+			<td class="group">XIV</td>
+			<td class="group">XV</td>
+			<td class="group">XVI</td>
+			<td class="group">XVII</td>
+			<td class="group">XVIII</td>
+		</tr>
+		<tr class="period" name="1">
+			<td class="group">1</br>H</td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group">2</br>HE</td>
+		</tr>
+		<tr class="period" name="2">
+			<td class="group">3</br>Li</td>
+			<td class="group">4</br>Be</td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group">5</br>B</td>
+			<td class="group">6</br>C</td>
+			<td class="group">7</br>N</td>
+			<td class="group">8</br>O</td>
+			<td class="group">9</br>F</td>
+			<td class="group">10</br>Ne</td>
+		</tr>
+		<tr class="period" name="3">
+			<td class="group">11</br>Na</td>
+			<td class="group">12</br>Mg</td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group">13</br>Al</td>
+			<td class="group">14</br>Si</td>
+			<td class="group">15</br>P</td>
+			<td class="group">16</br>S</td>
+			<td class="group">17</br>Cl</td>
+			<td class="group">18</br>Ar</td>
+		</tr>
+		<tr class="period" name="4">
+			<td class="group">19</br>K</td>
+			<td class="group">20</br>Ca</td>
+			<td class="group">21</br>Sc</td>
+			<td class="group">22</br>Ti</td>
+			<td class="group">23</br>V</td>
+			<td class="group">24</br>Cr</td>
+			<td class="group">25</br>Mn</td>
+			<td class="group">26</br>Fe</td>
+			<td class="group">27</br>Co</td>
+			<td class="group">28</br>Ni</td>
+			<td class="group">29</br>Cu</td>
+			<td class="group">30</br>Zn</td>
+			<td class="group">31</br>Ga</td>
+			<td class="group">32</br>Ge</td>
+			<td class="group">33</br>As</td>
+			<td class="group">34</br>Se</td>
+			<td class="group">35</br>Br</td>
+			<td class="group">36</br>Kr</td>
+		</tr>
+		<tr class="period" name="5">
+			<td class="group">37</br>Rb</td>
+			<td class="group">38</br>Sr</td>
+			<td class="group">39</br>Y</td>
+			<td class="group">40</br>Zr</td>
+			<td class="group">41</br>Nb</td>
+			<td class="group">42</br>Mo</td>
+			<td class="group">43</br>Tc</td>
+			<td class="group">44</br>Ru</td>
+			<td class="group">45</br>Rh</td>
+			<td class="group">46</br>Pd</td>
+			<td class="group">47</br>Ag</td>
+			<td class="group">48</br>Cd</td>
+			<td class="group">49</br>In</td>
+			<td class="group">50</br>Sn</td>
+			<td class="group">51</br>Sb</td>
+			<td class="group">52</br>Te</td>
+			<td class="group">53</br>I</td>
+			<td class="group">54</br>Xe</td>
+		</tr>
+		<tr class="period" name="6">
+			<td class="group">55</br>Cs</td>
+			<td class="group">56</br>Ba</td>
+			<td class="group">71</br>Lu</td>
+			<td class="group">72</br>Hf</td>
+			<td class="group">73</br>Ta</td>
+			<td class="group">74</br>W</td>
+			<td class="group">75</br>Re</td>
+			<td class="group">76</br>Os</td>
+			<td class="group">77</br>Ir</td>
+			<td class="group">78</br>Pt</td>
+			<td class="group">79</br>Au</td>
+			<td class="group">80</br>Hg</td>
+			<td class="group">81</br>Tl</td>
+			<td class="group">82</br>Pb</td>
+			<td class="group">83</br>Bi</td>
+			<td class="group">84</br>Po</td>
+			<td class="group">85</br>At</td>
+			<td class="group">86</br>Rn</td>
+		</tr>
+		<tr class="period" name="7">
+			<td class="group">87</br>Fr</td>
+			<td class="group">88</br>Ra</td>
+			<td class="group">103</br>Lr</td>
+			<td class="group">104</br>Rf</td>
+			<td class="group">105</br>Db</td>
+			<td class="group">106</br>Sg</td>
+			<td class="group">107</br>Bh</td>
+			<td class="group">108</br>Hs</td>
+			<td class="group">109</br>Mt</td>
+			<td class="group">110</br>Ds</td>
+			<td class="group">111</br>Rg</td>
+			<td class="group">112</br>Cn</td>
+			<td class="group">113</br>Uut</td>
+			<td class="group">114</br>Fl</td>
+			<td class="group">115</br>Uup</td>
+			<td class="group">116</br>Lv</td>
+			<td class="group">117</br>Uus</td>
+			<td class="group">118</br>Uuo</td>
+		</tr>
+		<tr class="period" name="blank">
+			<td class="group"> </br> </td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group"></td>
+		</tr>
+		<tr class="period" name="Lanthanide">
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group">57</br>La</td>
+			<td class="group">58</br>Ce</td>
+			<td class="group">59</br>Pr</td>
+			<td class="group">60</br>Nd</td>
+			<td class="group">61</br>Pm</td>
+			<td class="group">62</br>Sm</td>
+			<td class="group">63</br>Eu</td>
+			<td class="group">64</br>Gd</td>
+			<td class="group">65</br>Tb</td>
+			<td class="group">66</br>Dy</td>
+			<td class="group">67</br>Ho</td>
+			<td class="group">68</br>Er</td>
+			<td class="group">69</br>Tm</td>
+			<td class="group">70</br>Yb</td>
+			<td class="group"></td>
+			<td class="group"></td>
+		</tr>
+		<tr class="period" name="Actinide">
+			<td class="group"></td>
+			<td class="group"></td>
+			<td class="group">89</br>Ac</td>
+			<td class="group">90</br>Th</td>
+			<td class="group">91</br>Pa</td>
+			<td class="group">92</br>U</td>
+			<td class="group">93</br>Np</td>
+			<td class="group">94</br>Pu</td>
+			<td class="group">95</br>Am</td>
+			<td class="group">96</br>Cm</td>
+			<td class="group">97</br>Bk</td>
+			<td class="group">98</br>Cf</td>
+			<td class="group">99</br>Es</td>
+			<td class="group">100</br>Fm</td>
+			<td class="group">101</br>Md</td>
+			<td class="group">102</br>No</td>
+			<td class="group"></td>
+			<td class="group"></td>
+		</tr>
+	</table>
+</div>
 </body></html>
