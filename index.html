@@ -8,18 +8,29 @@ var game =
 {
 	menu:
 	{
-		page: function (id)
+		show: function (id)
 		{
-			let page = window.document.getElementById (id);
-			if (page.style.display != 'flex')
+			let pages = window.document.getElementsByClassName ('page');
+			for (let page of pages)
 			{
-				page.style.display = 'flex';
-			}
-			else
-			{
-				page.style.display = 'none';
+				if (page.id != id)
+				{
+					page.style.display = 'none';
+				}
 			}
 
+			let page = window.document.getElementById (id);
+			if (page)
+			{
+				if (page.style.display != 'flex')
+				{
+					page.style.display = 'flex';
+				}
+				else
+				{
+					page.style.display = 'none';
+				}
+			}
 		}
 	}
 }
@@ -87,15 +98,41 @@ td.group
 </head><body>
 
 <nav>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACVJREFUeAFjwAUYGdH4QITGRxFhhFOYDEyl6IZhaKGhABxg8zYAELwAJT6tCrcAAAAASUVORK5CYII=" /> BASE</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAB1JREFUeAFjwAoY4QDKR8hAKQR/cAtguhwOsPocABhwAC2sG29YAAAAAElFTkSuQmCC" /> DIPLOMACY</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACtJREFUeAFjwASMKByiBRB8YgUQfAICjDAKSsMZEB6yQgQPoQJFAAVgeh4AEpEALWKE0bUAAAAASUVORK5CYII=" /> ECONOMY</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA9SURBVHjadY8BCgAgCMQ8//9oaXAoxI2wHFZaOtSDUxMsyNmOaMgVFOwbGNYKlMXm+Yr/lXJjoL+xOJxBDH85AOwygcVrAAAAAElFTkSuQmCC" /> GENETICS</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA7SURBVHgBnY8xEgAgCMNo//9oBXPH0M1MNZ4VSk01RA2+CDEn5BPeJ0bACjoQBC7+RJTmtyFi9FgO4ACbqAEtZqt0MQAAAABJRU5ErkJggg==" /> INDUSTRY</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAAxSURBVHgBY2BEAgwgAGEyAQGyABOYoEAA01BUmyHSUFUMYAEmCAdMQQUggJoCaP4HAIQ1AP+ovkqyAAAAAElFTkSuQmCC" /> POPULATION</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA6SURBVHjajY1BCgAgDMPq/v9orREKimgOXchB1YwMytYkAeWcAWVe4fYokiJOijyhfsKYlTAhwLcbHZaLASNKVg1BAAAAAElFTkSuQmCC" /> SCIENCE</a>
-	<a href="#" onclick="game.menu.page ('table')"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAB1JREFUeAFjwASMKAAoAMFQghgBys3AFKCNwzAAADQQAGGLht1fAAAAAElFTkSuQmCC" /> TABLE</a>
-	<a href="#"><img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAABFSURBVHjadY8BDgAgCAKR/z+6xKxmyaaD01bBXHBZWJPhVEZ4DJhzRSEB5SQPsA5QdQADsAGot8BPZ2E/LfYvsBp+nysamJwBJIUuTcsAAAAASUVORK5CYII=" /> WAR</a>
+	<a href="#" onclick="game.menu.show ('base')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACVJREFUeAFjwAUYGdH4QITGRxFhhFOYDEyl6IZhaKGhABxg8zYAELwAJT6tCrcAAAAASUVORK5CYII=" /> BASE
+	</a>
+
+	<a href="#" onclick="game.menu.show ('diplomacy')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAB1JREFUeAFjwAoY4QDKR8hAKQR/cAtguhwOsPocABhwAC2sG29YAAAAAElFTkSuQmCC" /> DIPLOMACY
+	</a>
+
+	<a href="#" onclick="game.menu.show ('economy')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACtJREFUeAFjwASMKByiBRB8YgUQfAICjDAKSsMZEB6yQgQPoQJFAAVgeh4AEpEALWKE0bUAAAAASUVORK5CYII=" /> ECONOMY
+	</a>
+
+	<a href="#" onclick="game.menu.show ('genetics')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA9SURBVHjadY8BCgAgCMQ8//9oaXAoxI2wHFZaOtSDUxMsyNmOaMgVFOwbGNYKlMXm+Yr/lXJjoL+xOJxBDH85AOwygcVrAAAAAElFTkSuQmCC" /> GENETICS
+	</a>
+
+	<a href="#" onclick="game.menu.show ('industry')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA7SURBVHgBnY8xEgAgCMNo//9oBXPH0M1MNZ4VSk01RA2+CDEn5BPeJ0bACjoQBC7+RJTmtyFi9FgO4ACbqAEtZqt0MQAAAABJRU5ErkJggg==" /> INDUSTRY
+	</a>
+
+	<a href="#" onclick="game.menu.show ('population')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAAxSURBVHgBY2BEAgwgAGEyAQGyABOYoEAA01BUmyHSUFUMYAEmCAdMQQUggJoCaP4HAIQ1AP+ovkqyAAAAAElFTkSuQmCC" /> POPULATION
+	</a>
+
+	<a href="#" onclick="game.menu.show ('science')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAAA6SURBVHjajY1BCgAgDMPq/v9orREKimgOXchB1YwMytYkAeWcAWVe4fYokiJOijyhfsKYlTAhwLcbHZaLASNKVg1BAAAAAElFTkSuQmCC" /> SCIENCE
+	</a>
+
+	<a href="#" onclick="game.menu.show ('table')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAAB1JREFUeAFjwASMKAAoAMFQghgBys3AFKCNwzAAADQQAGGLht1fAAAAAElFTkSuQmCC" /> TABLE
+	</a>
+
+	<a href="#" onclick="game.menu.show ('war')">
+		<img class="nav" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACVBMVEUAAAD///////9zeKVjAAAAAnRSTlMAAHaTzTgAAABFSURBVHjadY8BDgAgCAKR/z+6xKxmyaaD01bBXHBZWJPhVEZ4DJhzRSEB5SQPsA5QdQADsAGot8BPZ2E/LfYvsBp+nysamJwBJIUuTcsAAAAASUVORK5CYII=" /> WAR
+	</a>
 </nav>
 
 <div class="page" id="table">
@@ -321,5 +358,8 @@ td.group
 			<td class="group"></td>
 		</tr>
 	</table>
+</div>
+
+<div class="page" id="war">
 </div>
 </body></html>
