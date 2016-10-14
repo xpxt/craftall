@@ -4,30 +4,21 @@
 <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAACVJREFUeAFjwAsYGRnBFAzABTBUYOiE6gLRtBSAAtwCSICBCAAAL0AAVRpuRpcAAAAASUVORK5CYII=" rel="icon" />
 
 <script>
-var game =
-{
-	menu:
-	{
-		show: function (id)
-		{
+var game = {
+	menu: {
+		show: function (id) {
 			let pages = window.document.getElementsByClassName ('page');
-			for (let page of pages)
-			{
-				if (page.id != id)
-				{
+			for (let page of pages) {
+				if (page.id != id) {
 					page.style.display = 'none';
 				}
 			}
 
 			let page = window.document.getElementById (id);
-			if (page)
-			{
-				if (page.style.display != 'flex')
-				{
+			if (page) {
+				if (page.style.display != 'flex') {
 					page.style.display = 'flex';
-				}
-				else
-				{
+				} else {
 					page.style.display = 'none';
 				}
 			}
@@ -37,19 +28,17 @@ var game =
 </script>
 
 <style>
-a
-{
+
+a {
 	color: gray;
 	text-decoration: none;
 }
 
-a:hover
-{
+a:hover {
 	color: ghostwhite;
 }
 
-body
-{
+body {
 	background: black;
 	font-family: monospace;
 	font-size: 1em;
@@ -61,8 +50,7 @@ body
 	width: 100%;
 }
 
-div.page
-{
+div.page {
 	align-items: center;
 	color: ghostwhite;
 	display: none;
@@ -71,36 +59,32 @@ div.page
 	width: 100%;
 }
 
-img.nav
-{
+img.nav {
 	vertical-align: bottom;
 }
 
-nav
-{
+nav {
 	color: gray;
 	margin: 1em;
 	text-align: center;
 }
 
-table.periodic
-{
+table.periodic {
 	color: ghostwhite;
 	text-align: center;
 	width: 85%;
 }
 
-td.group
-{
+td.group {
 	border: solid 1px transparent;
 	width: 5%;
 }
 
-td.group:hover
-{
+td.group:hover {
 	border: solid 1px ghostwhite;
 	cursor: pointer;
 }
+
 </style>
 
 <title>CRAFTALL</title>
