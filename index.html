@@ -54,9 +54,14 @@ div.page {
 	align-items: center;
 	color: ghostwhite;
 	display: none;
+	flex-wrap: wrap;
 	height: 100%;
-	justify-content: center;
+	justify-content: space-around;
 	width: 100%;
+}
+
+div.panel {
+	display: flex;
 }
 
 div.planet {
@@ -86,13 +91,20 @@ nav {
 
 table.periodic {
 	color: ghostwhite;
-	text-align: center;
-	width: 85%;
+	display: flex;
+	flex-basis: 100%;
+}
+
+tbody {
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
 }
 
 td.group {
 	border: solid 1px transparent;
-	width: 5%;
+	display: flex;
+	flex-basis: 5%;
 }
 
 td.group:hover {
@@ -100,6 +112,12 @@ td.group:hover {
 	cursor: pointer;
 }
 
+tr {
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+}
 </style>
 
 <title>CRAFTALL</title>
@@ -144,7 +162,15 @@ td.group:hover {
 </nav>
 
 <div class="page" id="base">
-	base
+	<div class="panel">
+		panel 1
+	</div>
+	<div class="panel">
+		panel 2
+	</div>
+	<div class="panel">
+		panel 3
+	</div>
 </div>
 
 <div class="page" id="diplomacy">
